@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>KPZ M5 - KPZ </title>
+<base href="https://www-m5.ma.tum.de/bin/view/M5/KPZ" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="imagetoolbar" content="no" />
+<script type="text/javascript" src="https://www-m5.ma.tum.de/foswiki/pub/skins/mn/mnscript.js">
+</script>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link href="https://www-m5.ma.tum.de/foswiki/pub/skins/mn/mn.css" rel="stylesheet" type="text/css" />
+<link href="https://www-m5.ma.tum.de/foswiki/pub/System/SkinTemplates/base.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+div.header { background-image: url(https://www-m5.ma.tum.de/foswiki/pub/skins/mn/TUM_header_bg.png); }
+div.content { background-image: url(https://www-m5.ma.tum.de/foswiki/pub/skins/mn/bg.gif); }
+</style>
+<style type="text/css"> div.content { background-color: #fcfcfc; background-image: none; } td { white-space: nowrap;} </style>
+<!-- Render-Head -->
+
+
+
+<script type='text/javascript' src='/foswiki/pub/System/JQueryPlugin/jquery-1.8.2.js'></script><!--JQUERYPLUGIN-->
+<script type='text/javascript' src='/foswiki/pub/System/JQueryPlugin/plugins/livequery/jquery.livequery.js?version=1.3.1'></script><!--JQUERYPLUGIN::LIVEQUERY-->
+<script type='text/javascript' src='/foswiki/pub/System/JQueryPlugin/plugins/foswiki/jquery.foswiki.js?version=2.01'></script><!--JQUERYPLUGIN::FOSWIKI: requires= missing ids: JQUERYPLUGIN::MIGRATE-->
+<script type="text/javascript" src="/foswiki/pub/System/JavascriptFiles/foswikiPref.js"></script><!--JavascriptFiles/foswikiPref-->
+<script type="text/javascript" src="/foswiki/pub/System/JavascriptFiles/foswikiString.js"></script><!--JavascriptFiles/foswikiString-->
+<script type='text/javascript'>
+jQuery.extend(foswiki, {
+ "preferences": {
+    "PUBURL": "https://www-m5.ma.tum.de/foswiki/pub",
+    "PUBURLPATH": "/foswiki/pub",
+    "SCRIPTSUFFIX": "",
+    "SCRIPTURL": "https://www-m5.ma.tum.de/bin",
+    "SCRIPTURLPATH": "/bin",
+    "SERVERTIME": "18 Nov 2015 - 17:12",
+    "SKIN": "mn",
+    "SYSTEMWEB": "System",
+    "TOPIC": "KPZ",
+    "USERNAME": "guest",
+    "USERSWEB": "Main",
+    "WEB": "M5",
+    "WIKINAME": "WikiGuest",
+    "WIKIUSERNAME": "Main.WikiGuest",
+    "NAMEFILTER": "[\s\*?~^\$@%`\"'\x26;|\x3c>\[\]#\x00-\x1f]"
+}});
+</script><!--JQUERYPLUGIN::FOSWIKI::PREFERENCES-->
+<script type="text/javascript" src="/foswiki/pub/System/JavascriptFiles/foswikiForm.js"></script><!--JavascriptFiles/foswikiForm-->
+<script type='text/javascript'>jQuery.extend(foswiki.preferences, { TWISTYANIMATIONSPEED: 'fast' });</script><!--TWISTYPLUGIN::META-->
+</head>
+<body class="foswikiNoJs "><div class="outer">
+<a name="PageTop"></a><div class="header"><img src="https://www-m5.ma.tum.de/foswiki/pub/M5/WebHome/Titelbild_m5.png" alt="Banner" usemap="#bannermap" /><map name="bannermap" id="bannermap"><area shape="rect" coords="0,60,290,117" href="http://www.tum.de" title="Hauptseite TUM" alt="Hauptseite TUM" /><area shape="rect" coords="0,0,980,117" href="/" title="Hauptseite Lehrstuhl" alt="Hauptseite Lehrstuhl" /></map><span class="rechts"><img src="https://www-m5.ma.tum.de/foswiki/pub/M5/WebHome/logo_bottomright_M5.png" alt="Mathematik Schriftzug" usemap="#logomap"/><map name="logomap" id="logomap"><area shape="rect" coords="0,0,30,49" href="/" title="Hauptseite Lehrstuhl" alt="Hauptseite Lehrstuhl" /><area shape="rect" coords="31,0,250,49" href="http://www.ma.tum.de/" title="Hauptseite Fakultät" alt="Hauptseite Fakultät" /></map></span></div>
+<table class="navbar">
+  <tr>
+	 <td class="left"><a onclick="toggle('edit');return false" onfocus="if (this.blur()) {this.blur(); }"><img src="https://www-m5.ma.tum.de/foswiki/pub/skins/mn/quadrat.gif" alt="Quadrat" /></a>
+	<a href="https://www-m5.ma.tum.de/bin/view/M5/WebHome">M5</a>     &gt; <b>KPZ</b>&nbsp;     <span id="edit" style="display: none;"> [ 
+  <a href='https://www-m5.ma.tum.de/bin/edit/M5/KPZ?t=1447863130' rel='nofollow' title='Edit this topic text' accesskey='e'><span class='foswikiAccessKey'>E</span>dit</a> <span class="foswikiSeparator">&nbsp;|&nbsp;</span> 
+  <a href='/bin/attach/M5/KPZ' rel='nofollow' title='Attach an image or document to this topic' accesskey='a'><span class='foswikiAccessKey'>A</span>ttach</a> <span class="foswikiSeparator">&nbsp;|&nbsp;</span> 
+  <a href='/bin/oops/M5/KPZ?template=oopsmore&amp;param1=16&amp;param2=16' rel='nofollow' title='Delete or rename this topic; set parent topic; view and compare revisions' accesskey='m'><span class='foswikiAccessKey'>M</span>ore topic actions</a> ]</span>
+	 </td>
+	 <td class="right">&nbsp;<a href="/bin/view/M5/Allgemeines/MichaelPraehofer">MichaelPraehofer</a> - 09 Aug 2014</td>
+  </tr>
+</table> <div class="content"><div class="foswikiContentHeader"></div><center>
+<h1>
+Exact scaling functions for one-dimensional stationary <a href="/bin/view/M5/KPZ" class="foswikiCurrentTopicLink">KPZ</a> growth</h1></center>
+<p></p>
+<center><b><a href="http://www-m5.ma.tum.de/pers/praehofer/">Michael
+Pr&auml;hofer</a> and <a href="http://www-m5.ma.tum.de/pers/spohn">Herbert
+Spohn</a></b>
+<p><i>Date:</i> March 29, 2003</center>
+<p></p>
+<h3>
+Abstract:</h3>
+We determine the stationary two-point correlation function of the one-dimensional
+<a href="/bin/view/M5/KPZ" class="foswikiCurrentTopicLink">KPZ</a> equation through the scaling limit of a solvable microscopic model,
+the polynuclear growth model. The equivalence to a directed polymer problem
+with specific boundary conditions allows one to express the corresponding
+scaling function in terms of the solution to a Riemann-Hilbert problem
+related to the Painlev&eacute; II equation. We solve these equations numerically
+with very high precision and compare with the prediction of Colaiori and
+Moore&nbsp; obtained from the mode coupling approximation.
+<br>&nbsp;
+<h3>
+<a href="http://arXiv.org/ps/cond-mat/0212519.ps.gz">Paper</a> [<a href="http://arXiv.org/pdf/cond-mat/0212519.pdf">PDF</a>]</h3>
+<p></p>
+<h3>
+Tables:</h3>
+<p></p>
+double precision tables (16 digits):
+<ul>
+<li>
+<a href="https://www-m5.ma.tum.de/foswiki/pub/M5/KPZ/U.040.200.0016.txt" target="_top">[Table</a>]
+The Hastings-McLeod solution <b>u(s)</b> of Painlev&eacute; II and associated
+functions <b>U(s)</b>, <b>u'(s)</b> in double precision (16 digits)
+for values <b>s=-40</b> to <b>200</b>, stepsize <b>1/16</b>. The
+columns are space separated with the following entries:</li>
+<p></p>
+<center><table BORDER=2 CELLSPACING=0 CELLPADDING=2 width=80% >
+<tr ALIGN=CENTER NOSAVE>
+<td ALIGN=CENTER NOSAVE><b>s</b></td>
+<td ALIGN=CENTER NOSAVE><b>U(s)</b></td>
+<td ALIGN=CENTER NOSAVE><b>u(s)</b></td>
+<td ALIGN=CENTER NOSAVE><b>u'(s)</b></td>
+<td ALIGN=CENTER NOSAVE><b>ln(U(s))</b></td>
+<td ALIGN=CENTER NOSAVE><b>ln(-u(s))</b></td>
+<td ALIGN=CENTER NOSAVE><b>ln(u'(s))</b></td>
+</tr>
+<p></p>
+</table></center>
+<p></p>
+<br>
+<li>
+<a href="https://www-m5.ma.tum.de/foswiki/pub/M5/KPZ/V.040.200.0016.txt" target="_top">[Table</a>]
+Same for <b>V(s)</b>, <b>v(s)</b>, and  <b>u(s)<sup>2</sup></b> with
+entries </li>
+<center><table BORDER=2 CELLSPACING=0 CELLPADDING=2 width=80% >
+<p></p>
+<tr ALIGN=CENTER NOSAVE>
+<td ALIGN=CENTER NOSAVE><b>s<sup> </sup></b></td>
+<td ALIGN=CENTER NOSAVE><b>V(s)<sup> </sup></b></td>
+<td ALIGN=CENTER NOSAVE><b>v(s)<sup> </sup></b></td>
+<td ALIGN=CENTER NOSAVE><b>u(s)<sup>2</sup></b></td>
+<td ALIGN=CENTER NOSAVE><b>ln(V(s))<sup> </sup></b></td>
+<td ALIGN=CENTER NOSAVE><b>ln(-v(s))<sup> </sup></b></td>
+<p></p>
+<td ALIGN=CENTER nowrap NOSAVE><b>ln(u(s)<sup>2</sup>)</b></td>
+</tr>
+</table></center>
+<p></p>
+<br>
+<li>
+<a href="https://www-m5.ma.tum.de/foswiki/pub/M5/KPZ/F2.040.200.0016.txt" target="_top">[Table</a>]
+The GUE Tracy-Widom distribution function
+<b>F<sub>2</sub>(s)=exp(-V(s))</b> in the form 
+<p></p>
+<center><table BORDER=2 CELLSPACING=0 CELLPADDING=2 width=40% >
+<tr ALIGN=CENTER NOSAVE>
+<td ALIGN=CENTER NOSAVE><b>s</b></td>
+<td ALIGN=CENTER NOSAVE><b>F<sub>2</sub>(s)</b></td>
+<td ALIGN=CENTER NOSAVE><b>log(F'<sub>2</sub>(s))</b></td>
+</tr>
+</table></center>
+<p></p>
+<br>The index two is used by convention and has <b>nothing</b> to do with
+<p></p>
+<b>F<sub>y</sub>(s)</b>, setting <b>y=2</b>.
+<br>
+<br>
+<li>
+<a href="https://www-m5.ma.tum.de/foswiki/pub/M5/KPZ/F1.040.200.0016.txt" target="_top">[Table</a>]
+The GOE Tracy-Widom distribution function
+<b>F<sub>1</sub>(s)=exp(-&#189;(V(s)+U(s)))</b> in the form 
+<p></p>
+<center><table BORDER=2 CELLSPACING=0 CELLPADDING=2 width=50% >
+<tr ALIGN=CENTER NOSAVE>
+<td ALIGN=CENTER NOSAVE><b>s</b></td>
+<td ALIGN=CENTER NOSAVE><b>F<sub>1</sub>(s)</b></td>
+<td ALIGN=CENTER NOSAVE><b>log(F'<sub>1</sub>(s))</b></td>
+<td ALIGN=CENTER NOSAVE><b>2<sup>-2/3</sup>s</b></td>
+</tr>
+<p></p>
+</table></center>
+<br>The index one is used by convention and has <b>nothing</b> to do with
+<b>F<sub>y</sub>(s)</b>, setting <b>y=1</b>.
+<br>
+<br>
+<li> <red>(updated July 31, 2014)</red>
+<a href="https://www-m5.ma.tum.de/foswiki/pub/M5/KPZ/F0.040.200.0016_new.txt" target="_top">[Table</a>]
+The Baik-Rains distribution function <b>F<sub>0</sub>(s)=(1-(s+2u'(s)+2u(s)<sup>2</sup>)v(s))exp(-2U(s)-V(s))</b>
+ in the form 
+<center><table BORDER=2 CELLSPACING=0 CELLPADDING=2 width=40% >
+<tr ALIGN=CENTER NOSAVE>
+<td ALIGN=CENTER NOSAVE><b>s</b></td>
+<td ALIGN=CENTER NOSAVE><b>F<sub>0</sub>(s)</b></td>
+<td ALIGN=CENTER NOSAVE><b>log(F'<sub>0</sub>(s))</b></td>
+<p></p>
+</tr>
+</table></center>
+<br>This is indeed <b>F<sub>y</sub>(s)</b>, setting <b>y=0</b> from the paper.
+<br>
+<br>
+<p></p>
+<p></p>
+</ul><br>
+Accuracy of the decimal numbers in the following tables is about 100 digits:
+<ul>
+<li>
+The scaling function <b>g(y)</b> in an ASCII file, first column is <b>y</b>,
+second column is <b>g(y)</b>, y=0, y=1/128, y=2/128, ... up to y=8.84375<b>:
+<p></p>
+</b>[<b><a href="https://www-m5.ma.tum.de/foswiki/pub/M5/KPZ/gy.txt">gy.txt</a></b>]</li>
+<p></p>
+<br>&nbsp;
+<li>
+<b>g(y)</b> with derivatives n an ASCII file, first column is <b>y</b>,
+second column is <b>g(y)</b>, and every sixteenth line column 3 to 6 contain
+<b>g'(y)</b>,
+<b>g''(y)</b>, <b>g'''(y)</b>, and
+<p></p>
+<b>g''''(y)</b>, respectively. Values
+of y range from -8.625 to 8.625<b>: </b>[<b><a href="https://www-m5.ma.tum.de/foswiki/pub/M5/KPZ/gy-deriv.txt">gy-deriv.txt</a></b>].</li>
+<p></p>
+<br>To properly import the file in <b>Mathematica</b>, use:
+<br>&nbsp;
+<p><b><tt>gg = Import["gy-deriv.txt","Table"];</tt></b>
+<br><b><tt>g = Interpolation[Table[{Rationalize[gg[[i]][[1]]],Rest[gg[[i]]]}</tt></b>
+<br><b><tt>&nbsp;&nbsp;&nbsp; ,{i,Length[gg]}],InterpolationOrder -&gt; 57];</tt></b>
+<p></p>
+<br><b><tt>f = Function[y,g''[y]/4];</tt></b>
+<br><b><tt>Plot[f[y],{y,-3,3}]</tt></b>
+<br><img SRC="/foswiki/pub/M5/KPZ/clipboard.gif" ALT="f(y)" ></ul>
+<p></p>
+<hr>
+<address>
+<b><i><a href="http://www-m5.ma.tum.de/pers/praehofer/">Michael
+Pr&auml;hofer</a></i></b></address>
+<p></p>
+<br><b><i>2003-03-29</i></b>
+<a name="TopicEnd"></a>
+<div class="foswikiContentFooter"></div></div>
+<a name="PageBottom"></a>
+<table class="footer">
+  <tr>
+	 <td class="left"><a href="/bin/view/M5/Impressum">Impressum</a> <span class="foswikiSeparator">&nbsp;|&nbsp;</span> <a href="http://www.ma.tum.de/Mathematik/DatenschutzErklaerung">Datenschutzerklärung</a> <span class="foswikiSeparator">&nbsp;|&nbsp;</span> <a href="mailto:praehofe@ma.tum.de?subject=Foswiki&#32;Feedback&#32;on&#32;M5.KPZ">Anregungen</a></td>
+	 <td class="right">
+		  <a href="http://validator.w3.org/check?uri=referer"><img src="https://www-m5.ma.tum.de/foswiki/pub/skins/mn/valid-xhtml10.png" alt="Valid XHTML 1.0 Transitional" height="31" width="88" /></a>
+	 </td>
+  </tr>
+</table></div>
+</body></html>

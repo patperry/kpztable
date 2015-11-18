@@ -1,0 +1,149 @@
+   [1]Banner [2]Mathematik Schriftzug
+   Quadrat [3]M5 > KPZ  [ [4]Edit  |  [5]Attach  |  [6]More topic
+   actions ]  [7]MichaelPraehofer - 09 Aug 2014
+
+      [1] http://www.tum.de/
+      [2] https://www-m5.ma.tum.de/
+      [3] https://www-m5.ma.tum.de/bin/view/M5/WebHome
+      [4] https://www-m5.ma.tum.de/bin/edit/M5/KPZ?t=1447863131
+      [5] https://www-m5.ma.tum.de/bin/attach/M5/KPZ
+      [6] https://www-m5.ma.tum.de/bin/oops/M5/KPZ?template=oopsmore&param1=16&param2=16
+      [7] https://www-m5.ma.tum.de/bin/view/M5/Allgemeines/MichaelPraehofer
+
+Exact scaling functions for one-dimensional stationary [8]KPZ growth
+
+      [8] https://www-m5.ma.tum.de/bin/view/M5/KPZ
+
+             [9]Michael Prähofer and [10]Herbert Spohn
+
+      [9] http://www-m5.ma.tum.de/pers/praehofer/
+     [10] http://www-m5.ma.tum.de/pers/spohn
+
+                        Date: March 29, 2003
+
+Abstract:
+
+   We determine the stationary two-point correlation function of
+   the one-dimensional [11]KPZ equation through the scaling limit
+   of a solvable microscopic model, the polynuclear growth model.
+   The equivalence to a directed polymer problem with specific
+   boundary conditions allows one to express the corresponding
+   scaling function in terms of the solution to a Riemann-Hilbert
+   problem related to the Painlevé II equation. We solve these
+   equations numerically with very high precision and compare with
+   the prediction of Colaiori and Moore  obtained from the mode
+   coupling approximation.
+
+     [11] https://www-m5.ma.tum.de/bin/view/M5/KPZ
+
+
+[12]Paper [[13]PDF]
+
+     [12] http://arXiv.org/ps/cond-mat/0212519.ps.gz
+     [13] http://arXiv.org/pdf/cond-mat/0212519.pdf
+
+Tables:
+
+   double precision tables (16 digits):
+     * [14][Table] The Hastings-McLeod solution u(s) of Painlevé
+       II and associated functions U(s), u'(s) in double precision
+       (16 digits) for values s=-40 to 200, stepsize 1/16. The
+       columns are space separated with the following entries:
+
+     [14] https://www-m5.ma.tum.de/foswiki/pub/M5/KPZ/U.040.200.0016.txt
+
+           s U(s) u(s) u'(s) ln(U(s)) ln(-u(s)) ln(u'(s))
+
+     * [15][Table] Same for V(s), v(s), and u(s)^2 with entries
+
+     [15] https://www-m5.ma.tum.de/foswiki/pub/M5/KPZ/V.040.200.0016.txt
+
+             s^     V(s)^ v(s)^ u(s)^2 ln(V(s))^ ln(-v(s))^
+
+          ln(u(s)^2)
+
+     * [16][Table] The GUE Tracy-Widom distribution function
+       F[2](s)=exp(-V(s)) in the form
+
+     [16] https://www-m5.ma.tum.de/foswiki/pub/M5/KPZ/F2.040.200.0016.txt
+      [2] https://www-m5.ma.tum.de/
+
+                       s F[2](s) log(F'[2](s))
+
+      [2] https://www-m5.ma.tum.de/
+      [2] https://www-m5.ma.tum.de/
+
+       The index two is used by convention and has nothing to do
+       with
+       F[y](s), setting y=2.
+     * [17][Table] The GOE Tracy-Widom distribution function
+       F[1](s)=exp(-½(V(s)+U(s))) in the form
+
+     [17] https://www-m5.ma.tum.de/foswiki/pub/M5/KPZ/F1.040.200.0016.txt
+      [1] http://www.tum.de/
+
+                   s F[1](s) log(F'[1](s)) 2^-2/3s
+
+      [1] http://www.tum.de/
+      [1] http://www.tum.de/
+
+       The index one is used by convention and has nothing to do
+       with F[y](s), setting y=1.
+     * (updated July 31, 2014) [18][Table] The Baik-Rains
+       distribution function
+       F[0](s)=(1-(s+2u'(s)+2u(s)^2)v(s))exp(-2U(s)-V(s)) in the
+       form
+
+     [18] https://www-m5.ma.tum.de/foswiki/pub/M5/KPZ/F0.040.200.0016_new.txt
+
+                       s F[0](s) log(F'[0](s))
+
+       This is indeed F[y](s), setting y=0 from the paper.
+
+   Accuracy of the decimal numbers in the following tables is
+   about 100 digits:
+     * The scaling function g(y) in an ASCII file, first column is
+       y, second column is g(y), y=0, y=1/128, y=2/128, ... up to
+       y=8.84375:
+       [[19]gy.txt]
+
+      https://www-m5.ma.tum.de/foswiki/pub/M5/KPZ/gy.txt
+
+     * g(y) with derivatives n an ASCII file, first column is y,
+       second column is g(y), and every sixteenth line column 3 to
+       6 contain g'(y), g''(y), g'''(y), and
+       g''''(y), respectively. Values of y range from -8.625 to
+       8.625: [[20]gy-deriv.txt].
+       To properly import the file in Mathematica, use:
+
+     [20] https://www-m5.ma.tum.de/foswiki/pub/M5/KPZ/gy-deriv.txt
+
+       gg = Import["gy-deriv.txt","Table"];
+       g =
+       Interpolation[Table[{Rationalize[gg[[i]][[1]]],Rest[gg[[i]]
+       ]}
+           ,{i,Length[gg]}],InterpolationOrder -> 57];
+       f = Function[y,g''[y]/4];
+       Plot[f[y],{y,-3,3}]
+       f(y)
+     __________________________________________________________
+
+      [1] http://www.tum.de/
+
+
+    [21]Michael Prähofer
+
+     [21] http://www-m5.ma.tum.de/pers/praehofer/
+
+   2003-03-29
+   [22]Impressum  |  [23]Datenschutzerklärung  |  [24]Anregungen
+   [25]Valid XHTML 1.0 Transitional
+
+     [22] https://www-m5.ma.tum.de/bin/view/M5/Impressum
+     [23] http://www.ma.tum.de/Mathematik/DatenschutzErklaerung
+     [24] mailto:praehofe@ma.tum.de?subject=Foswiki%20Feedback%20on%20M5.KPZ
+     [25] http://validator.w3.org/check?uri=referer
+
+
+--
+Retrieved Wed Nov 18 16:12:11 UTC 2015
